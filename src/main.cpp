@@ -165,7 +165,8 @@ void render(const std::vector<std::vector<Coordinates> > &polygons)
 
     // Colores de relleno para cada polígono
     Color fillColors[] = {
-        Color(255, 0, 0),     // Verde
+      Color(0, 255, 0),     // Verde
+      Color(0, 0, 0)        // Negro
     };
 
     for (size_t i = 0; i < polygons.size(); ++i)
@@ -246,11 +247,33 @@ int main()
     // Definir los polígonos
     std::vector<std::vector<Coordinates> > polygons;
 
-    std::vector<Coordinates> polygon3;
-    polygon3.push_back(Coordinates(377, 249));
-    polygon3.push_back(Coordinates(411, 197));
-    polygon3.push_back(Coordinates(436, 249));
-    polygons.push_back(polygon3);
+    std::vector<Coordinates> polygon4;
+    polygon4.push_back(Coordinates(413, 177));
+    polygon4.push_back(Coordinates(448, 159));
+    polygon4.push_back(Coordinates(502, 88));
+    polygon4.push_back(Coordinates(553, 53));
+    polygon4.push_back(Coordinates(535, 36));
+    polygon4.push_back(Coordinates(676, 37));
+    polygon4.push_back(Coordinates(660, 52));
+    polygon4.push_back(Coordinates(750, 145));
+    polygon4.push_back(Coordinates(761, 179));
+    polygon4.push_back(Coordinates(672, 192));
+    polygon4.push_back(Coordinates(659, 214));
+    polygon4.push_back(Coordinates(615, 214));
+    polygon4.push_back(Coordinates(632, 230));
+    polygon4.push_back(Coordinates(580, 230));
+    polygon4.push_back(Coordinates(597, 215));
+    polygon4.push_back(Coordinates(552, 214));
+    polygon4.push_back(Coordinates(517, 144));
+    polygon4.push_back(Coordinates(466, 180));
+    polygons.push_back(polygon4);
+
+    std::vector<Coordinates> polygon5;
+    polygon5.push_back(Coordinates(682, 175));
+    polygon5.push_back(Coordinates(708, 120));
+    polygon5.push_back(Coordinates(735, 148));
+    polygon5.push_back(Coordinates(739, 170));
+    polygons.push_back(polygon5);
 
     // Renderizar la escena
     render(polygons);
